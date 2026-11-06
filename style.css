@@ -1,0 +1,278 @@
+/* ===== PAGE BASICS ===== */
+body{
+    background-color: rgb(240, 250, 244);
+    color: rgb(35, 55, 45);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER =====
+   A class starts with a dot in CSS and is written as class="header" in HTML.
+   Unlike an id, the same class can be used on many elements. */
+.header{
+    background-color: rgb(30, 120, 80);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.header h1{
+    margin: 5px;
+    font-size: 40px;
+}
+
+/* the beating heart uses @keyframes, same idea as the weather app icon */
+#beat{
+    font-size: 70px;
+    animation: beat 1s infinite alternate;
+}
+
+@keyframes beat{
+    from{ transform: scale(1); }
+    to{ transform: scale(1.25); }
+}
+
+/* ===== NAV BAR ===== */
+.nav{
+    background-color: rgb(20, 90, 60);
+    text-align: center;
+    padding: 12px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin: 3px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+/* :hover = how it looks when the mouse is on top of it */
+.nav a:hover{
+    background-color: rgb(120, 200, 160);
+    color: rgb(20, 60, 40);
+}
+
+/* ===== SECTIONS ===== */
+.section{
+    background-color: white;
+    border: 2px solid rgb(180, 225, 200);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px;
+}
+
+.section h2{
+    color: rgb(30, 120, 80);
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 3px solid rgb(180, 225, 200);
+    padding-bottom: 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+/* ===== IMAGES ===== */
+.banner{
+    width: 100%;
+    max-width: 850px;
+    height: 300px;
+    object-fit: cover;          /* crops the photo neatly instead of stretching it */
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto;          /* auto on left and right centres the image */
+    background-color: rgb(225, 245, 232);
+}
+
+.cardimg{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: rgb(225, 245, 232);
+}
+
+.gallery{
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid rgb(180, 225, 200);
+    border-radius: 12px;
+    margin: 8px;
+    background-color: rgb(225, 245, 232);
+}
+
+.gallery:hover{
+    border-color: rgb(30, 120, 80);
+    transform: scale(1.05);
+}
+
+/* ===== CARDS =====
+   display: inline-block puts the cards side by side in a row,
+   vertical-align: top lines up their tops even if the text lengths differ. */
+.card{
+    display: inline-block;
+    vertical-align: top;
+    width: 230px;
+    background-color: rgb(248, 255, 251);
+    border: 2px solid rgb(180, 225, 200);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    text-align: left;
+}
+
+.card:hover{
+    background-color: rgb(225, 245, 232);
+    border-color: rgb(30, 120, 80);
+}
+
+.card h3{
+    color: rgb(30, 120, 80);
+    margin-top: 10px;
+}
+
+/* a wider card, used for the sleep and water boxes */
+.bigcard{
+    display: inline-block;
+    vertical-align: top;
+    width: 360px;
+    background-color: rgb(248, 255, 251);
+    border: 2px solid rgb(180, 225, 200);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+.bigcard h3{
+    color: rgb(30, 120, 80);
+}
+
+/* ===== STAT BOXES ===== */
+.stat{
+    display: inline-block;
+    vertical-align: top;
+    width: 160px;
+    background-color: rgb(30, 120, 80);
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.stat h1{
+    margin: 5px;
+    font-size: 38px;
+}
+
+.stat p{
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* ===== TABLES ===== */
+table{
+    width: 90%;
+    margin: 15px auto;
+    border-collapse: collapse;   /* joins the cell borders into one clean line */
+}
+
+table td{
+    border: 1px solid rgb(180, 225, 200);
+    padding: 10px;
+    text-align: center;
+}
+
+.tablehead td{
+    background-color: rgb(30, 120, 80);
+    color: white;
+    font-weight: bold;
+}
+
+/* zebra stripes: every even row gets a light background */
+table tr:nth-child(even){
+    background-color: rgb(240, 250, 244);
+}
+
+/* ===== HIGHLIGHT NOTE ===== */
+.note{
+    background-color: rgb(255, 245, 215);
+    border-left: 6px solid rgb(230, 170, 30);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px;
+}
+
+/* ===== TRACKER / MINI APP BOXES ===== */
+.tracker{
+    background-color: rgb(225, 245, 232);
+    border: 2px dashed rgb(30, 120, 80);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.tracker h1{
+    font-size: 50px;
+    color: rgb(30, 120, 80);
+    margin: 10px;
+}
+
+.tracker h3{
+    color: rgb(30, 120, 80);
+}
+
+/* ===== BUTTONS AND INPUTS ===== */
+button{
+    background-color: rgb(30, 120, 80);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    margin: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(20, 90, 60);
+}
+
+input, select, textarea{
+    padding: 10px;
+    border: 2px solid rgb(180, 225, 200);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* ===== CONTACT FORM BOX ===== */
+.formbox{
+    background-color: rgb(248, 255, 251);
+    border: 2px solid rgb(180, 225, 200);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px auto;
+    width: 70%;
+    text-align: center;
+}
+
+#formResult{
+    color: rgb(30, 120, 80);
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    background-color: rgb(20, 90, 60);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
